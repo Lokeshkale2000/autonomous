@@ -1,11 +1,13 @@
 // src/components/Upload.js
 import React, { useState } from 'react';
 import axios from 'axios';
-import './Upload.css'; 
+import { useNavigate } from 'react-router-dom';
+import './Upload.css';
 
 const Upload = () => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [uploadStatus, setUploadStatus] = useState('');
+  const navigate = useNavigate(); // Initialize useNavigate
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -13,7 +15,6 @@ const Upload = () => {
     setUploadStatus('');
   };
 
-  // Handle file upload with POST request
   const handleUpload = async () => {
     if (!selectedFile) {
       alert('Please select a file to upload.');
@@ -39,35 +40,47 @@ const Upload = () => {
     }
   };
 
-  // Handle file change (resetting the selection)
-  const handleChangeFile = () => {
+  const handleResetFile = () => {
     setSelectedFile(null);
     setUploadStatus('');
-    document.getElementById('fileInput').value = ''; // Reset file input
+    document.getElementById('fileInput').value = '';
+  };
+
+  // Navigate to Cover Letter page
+  const handleNewCoverLetter = () => {
+    navigate('/cover-letter');
   };
 
   return (
-    <div className="container">
-      <h1>Upload Your Resume</h1>
-      <div className='upload-resume-container'>
-        <input
-          type="file"
-          id="fileInput"
-          accept=".pdf, .doc, .docx"
-          onChange={handleFileChange}
-          className="file-input"
-        />
-       
-        <button onClick={handleChangeFile} className='upload-change-btn'>
-        Change
-      </button>
-      </div>
+    <div className='upload-main-container'>
+      <div className="container-left">
+        <h1>Upload Your Resume</h1>
+        <div className='upload-resume-container'>
+          <input
+            type="file"
+            id="fileInput"
+            accept=".pdf, .doc, .docx"
+            onChange={handleFileChange}
+            className="file-input"
+          />
+          <button onClick={handleResetFile} className='upload-change-btn'>
+            Change File
+          </button>
+        </div>
 
-      {uploadStatus && <p className="status-message">{uploadStatus}</p>}
+        {uploadStatus && <p className="status-message">{uploadStatus}</p>}
 
-      <button onClick={handleUpload} className="upload-button">
+        <button onClick={handleUpload} className="upload-button">
           Continue
         </button>
+      </div>
+
+      <div className="container-right">
+        <h1>Create from Template</h1>
+        <button onClick={handleNewCoverLetter} className='new-cover-letter-btn'>
+          New Cover Letter
+        </button>
+      </div>
     </div>
   );
 };

@@ -69,7 +69,7 @@ const General = () => {
         <h1 className="general-account-header">General Account Settings</h1>
 
         <div className="general-title">
-          <p><strong>Generated Account ID:</strong> {accountId || fetchedAccountId} <span></span></p>// create backend to save random and fetch that the same to the front end
+          <p><strong>Generated Account ID:</strong> {accountId || fetchedAccountId} <span></span></p>
           <p><strong>Email ID:</strong> example@example.com{} <span><button >edit</button></span></p> 
           <p><strong>Password:</strong> ********* {} <span><button>edit</button></span></p>
           <p><strong>Contact Info:</strong> +1 234 567 890 {} <span> <button>edit</button></span></p>

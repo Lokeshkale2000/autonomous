@@ -1,7 +1,19 @@
-.container {
+.container-left {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 50px auto;
   font-family: Arial, sans-serif;
+  width: 40%;
+ 
+}
+.container-right{
+  text-align: center;
+  margin-top: 50px auto;
+  font-family: Arial, sans-serif;
+  width: 40%;
+
+}
+upload-main-container{
+  display: flex;
 }
 
 .upload-resume-container {

@@ -2,6 +2,8 @@
 import './App.css';
 import MainAccountSetting from './component/pages/Account Setting/MainAccountSetting';
 import PaymentUi from './component/pages/Payment/PaymentUi/PaymentUi';
+import GeneralAccountSettings from "./component/pages/Account Setting/General Account/General"
+import Subscription from './component/pages/Account Setting/Subscription/Subscription';
 
 import Upload from './component/pages/Upload/Upload';
 
@@ -12,6 +14,8 @@ function App() {
    <Upload></Upload>
    <MainAccountSetting></MainAccountSetting>
    <PaymentUi></PaymentUi>
+   <GeneralAccountSettings></GeneralAccountSettings>
+   <Subscription></Subscription>
    
    
    </>
@@ -19,3 +23,7 @@ function App() {
 }
 
 export default App;
+
+
+
+

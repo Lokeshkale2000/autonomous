@@ -9,12 +9,12 @@
   
   h2 {
     text-align: center;
-    color: #333;
+    color: #0e0e0e;
   }
   
   p {
     text-align: center;
-    color: #666;
+    color: #000000;
   }
   
   .form-row {
@@ -58,12 +58,19 @@
     margin-top: 20px;
   }
   
-  .cancel-button,
-  .save-button {
+  .cancel-button{
+
     padding: 10px 15px;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+  }
+  .save-button-Rec {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+   background-color: green;
   }
   
   .cancel-button {

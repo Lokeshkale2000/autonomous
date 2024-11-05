@@ -12,6 +12,7 @@ import Subject from '../../coverletter/Subject';
 import Letterbody from '../../coverletter/Letterbody';
 import Opening from '../../coverletter/Opening'
 import Conclusion from '../../coverletter/Conclusion';
+import Closed from '../../coverletter/Closed';
 
 
 
@@ -32,8 +33,11 @@ const MainAccountSetting = () => {
           <Route path="/subject" element={<Subject />} />
           <Route path="/letterbody-page" element={<Letterbody/>} />
           <Route path="/opening-page" element={<Opening/>} />
+        
           <Route path="/closing-page" element={<Conclusion/>} />
+          <Route path="/closed-page" element={<Closed/>} />
         </Routes>
+
       </div>
     </div>
   );

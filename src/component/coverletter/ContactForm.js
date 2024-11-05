@@ -133,7 +133,7 @@ const ContactForm = () => {
         </div>
         <div className="form-buttons">
           <button type="button" className="cancel-button">Cancel</button>
-          <button type="submit" className="save-button">Save</button>
+          <button type="submit" className="save-button-contact">Save</button>
           <button type="button" className="next-button" onClick={handleNext}>Next</button> 
         </div>
       </form>

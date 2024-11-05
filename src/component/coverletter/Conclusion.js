@@ -43,10 +43,10 @@ const Conclusion = () => {
     }
   };
 
-  // Function to handle the Next button click
+  
   const handleNext = () => {
-    // Example: Navigate to another route
-    navigate('/next-step'); // Change this to your actual next route
+   
+    navigate('/closed-page'); // Change this to your actual next route
   };
 
   return (
@@ -77,7 +77,7 @@ const Conclusion = () => {
         />
         <div className="button-container">
           <button onClick={handleClear} className="clear-button">Clear</button>
-          <button onClick={createPost} className="save-button">Save</button>
+          <button onClick={createPost} className="save-button-Con">Save</button>
           <button onClick={handleNext} className="next-button">Next</button> {/* Next Button */}
         </div>
       </div>

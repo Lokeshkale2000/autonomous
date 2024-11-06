@@ -151,7 +151,7 @@ const RecipientForm = () => {
           </div>
         </div>
         <div className="form-buttons">
-          <button type="button" className="cancel-button" onClick={() => setRecipientData({})}>Cancel</button>
+          <button type="button" className="cancel-button" onClick={() => setRecipientData({})}>Clear</button>
           <button type="submit" className="save-button-Rec">Save</button>
           <button type="button" className="next-button" onClick={handleNext}>Next</button>
         </div>

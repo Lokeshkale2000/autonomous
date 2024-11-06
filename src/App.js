@@ -1,7 +1,7 @@
 
 import './App.css';
 import MainAccountSetting from './component/pages/Account Setting/MainAccountSetting';
-import PaymentUi from './component/pages/Payment/PaymentUi/PaymentUi';
+//import PaymentUi from './component/pages/Payment/PaymentUi/PaymentUi';
 //import GeneralAccountSettings from "./component/pages/Account Setting/General Account/General"
 //import Subscription from './component/pages/Account Setting/Subscription/Subscription';
 
@@ -11,10 +11,10 @@ function App() {
   return (
    <>
   
-   <Upload></Upload>
+   
    <MainAccountSetting></MainAccountSetting>
-   <PaymentUi></PaymentUi>
-
+   
+<Upload></Upload>
    
    
    

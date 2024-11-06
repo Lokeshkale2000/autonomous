@@ -41,7 +41,7 @@ const Closed = () => {
   };
 
   const handleNext = () => {
-    navigate('/next-page'); // Replace '/next-page' with the actual route you want to navigate to
+    navigate('/tempmanager'); // Replace '/next-page' with the actual route you want to navigate to
   };
 
   return (

@@ -13,7 +13,11 @@ import Letterbody from '../../coverletter/Letterbody';
 import Opening from '../../coverletter/Opening'
 import Conclusion from '../../coverletter/Conclusion';
 import Closed from '../../coverletter/Closed';
-
+import TemplateManager from '../templateManages/TemplateManager';
+import TemplateDetails1 from '../templateManages/TemplateDetails1';
+import TemplateDetails2 from '../templateManages/TemplateDetails2';
+import TemplateDetails3 from '../templateManages/TemplateDetails3';
+import TemplateDetails4 from '../templateManages/TemplateDetails4';
 
 
 
@@ -36,6 +40,12 @@ const MainAccountSetting = () => {
         
           <Route path="/closing-page" element={<Conclusion/>} />
           <Route path="/closed-page" element={<Closed/>} />
+          <Route path='/tempmanager' element={<TemplateManager/>}></Route>
+          <Route path="/template/1" element={<TemplateDetails1 />} />
+        <Route path="/template/2" element={<TemplateDetails2 />} />
+        <Route path="/template/3" element={<TemplateDetails3 />} />
+        <Route path="/template/4" element={<TemplateDetails4 />} />
+    
         </Routes>
 
       </div>

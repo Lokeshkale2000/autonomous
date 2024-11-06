@@ -89,7 +89,7 @@ const Opening = () => {
         />
         
         <div className="button-container">
-          <button onClick={handleCancel} className="cancel-button">Cancel</button>
+          <button onClick={handleCancel} className="cancel-button">Clear</button>
           <button onClick={handleAdd} className="add-button" disabled={!openingText}>Save</button>
           <button onClick={handleNext} className="next-button">Next</button>
         </div>

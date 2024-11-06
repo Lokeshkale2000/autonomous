@@ -107,7 +107,7 @@ const Subject = ({ onBack }) => {
         </div>
 
         <div className="form-buttons">
-          <button type="button" onClick={onBack} className="back-button">Back</button>
+          <button type="button" onClick={onBack} className="back-button">Clear</button>
           <button type="submit" className="submit-button">Submit</button>
           <button type="button" onClick={handleNext} className="next-button">Next</button>
         </div>

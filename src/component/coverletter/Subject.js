@@ -5,24 +5,15 @@ import './Subject.css';
 const Subject = ({ onBack }) => {
   const [subjectName, setSubjectName] = useState('');
   const [title, setTitle] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [openingText, setOpeningText] = useState('');
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
 
   const handleSubjectChange = (e) => setSubjectName(e.target.value);
   const handleTitleChange = (e) => setTitle(e.target.value);
-  const handleLastNameChange = (e) => setLastName(e.target.value);
-  const handleOpeningTextChange = (e) => setOpeningText(e.target.value);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    const subjectData = {
-      subjectName,
-      title,
-      lastName,
-      openingText,
-    };
+    const subjectData = { subjectName, title };
 
     try {
       const response = await fetch('YOUR_API_URL_HERE', {
@@ -34,17 +25,23 @@ const Subject = ({ onBack }) => {
       });
 
       if (response.ok) {
-        console.log('Subject information submitted successfully');
+        alert('Subject information submitted successfully');
       } else {
-        console.error('Failed to submit subject information');
+        alert('Failed to submit subject information');
       }
     } catch (error) {
       console.error('Error submitting subject information:', error);
+      alert('Error submitting subject information');
     }
   };
 
   const handleNext = () => {
-    navigate('/opening-page'); // Replace '/next-page' with your desired path
+    navigate('/opening-page');
+  };
+
+  const handleClear = () => {
+    setSubjectName('');
+    setTitle('');
   };
 
   return (
@@ -81,33 +78,8 @@ const Subject = ({ onBack }) => {
           </select>
         </div>
 
-        <div className="form-group">
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={lastName}
-            onChange={handleLastNameChange}
-            placeholder="Smith"
-            required
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="openingText">Opening Text</label>
-          <textarea
-            id="openingText"
-            name="openingText"
-            value={openingText}
-            onChange={handleOpeningTextChange}
-            placeholder="I hope this message finds you well."
-            required
-          />
-        </div>
-
         <div className="form-buttons">
-          <button type="button" onClick={onBack} className="back-button">Clear</button>
+          <button type="button" onClick={handleClear} className="back-button">Clear</button>
           <button type="submit" className="submit-button">Submit</button>
           <button type="button" onClick={handleNext} className="next-button">Next</button>
         </div>

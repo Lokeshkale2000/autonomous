@@ -4,8 +4,10 @@ import './TemplateDetails1'
 const TemplateDetails1 = () => {
   return (
     <>
-        <div>
-            hello
+        <div className=''>
+          <div className=''>
+
+          </div>
 
             
 

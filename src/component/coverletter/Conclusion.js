@@ -22,7 +22,7 @@ const Conclusion = () => {
 
   const createPost = async () => {
     try {
-      const response = await fetch('/api/saveConclusion', {
+      const response = await fetch('http://localhost:5000/conclusion', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const Conclusion = () => {
   
   const handleNext = () => {
    
-    navigate('/closed-page'); // Change this to your actual next route
+    navigate('/tempmanager'); // Change this to your actual next route
   };
 
   return (

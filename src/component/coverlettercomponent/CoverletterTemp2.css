@@ -1,8 +1,8 @@
 /* Container for the whole cover letter */
 .cover-letter-container-temp2 {
-    width: 750px; 
+    width: 650px; 
     margin: 0 auto;
-    padding: 20px;
+    padding: 20px 90px;
     font-family: Arial, sans-serif;
     background-color: #fafafa;
     border: 1px solid red;

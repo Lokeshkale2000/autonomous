@@ -75,7 +75,7 @@ const CoverletterTemp1 = () => {
                     </h1>
                     <h1  className="Coverletter-contact-h2">{contact.lastName}</h1>
                     <div className="contact-details">
-                      <h3>Contact</h3>
+                      <h3 style={{color:"black"}}>Contact</h3>
                       <hr />
                       <strong>Phone:</strong> {contact.phone} <br />
                       <strong>Email:</strong> {contact.email} <br />
@@ -140,7 +140,7 @@ const CoverletterTemp1 = () => {
               () => (
                 <ul>
                   {openingTexts.map((text) => (
-                    <li key={text._id}className="opening-texts-section">{text.openingText}</li>
+                    <li key={text._id}className="opening-texts-section" >{text.openingText}</li>
                   ))}
                 </ul>
               )
@@ -168,7 +168,7 @@ const CoverletterTemp1 = () => {
           <div className="sincerely-section">
             <h3 style={{marginLeft:"120px"}}>Sincerely,</h3>
             {contacts.length > 0 && (
-              <p style={{marginLeft:"-340px"}}>{contacts[0].firstName} {contacts[0].lastName}</p>
+              <p style={{marginLeft:"-310px"}}>{contacts[0].firstName} {contacts[0].lastName}</p>
             )}
           </div>
         </div>

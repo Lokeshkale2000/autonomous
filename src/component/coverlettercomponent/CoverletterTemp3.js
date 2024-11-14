@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './CoverletterTemp3.css'
+import './CoverletterTemp3.css';  // Import the separate CSS file
 
 const Coverlettertemp3 = () => {
   const [contacts, setContacts] = useState([]);
@@ -94,7 +94,7 @@ const Coverlettertemp3 = () => {
               <ul>
                 {contacts.map((contact) => (
                   <li key={contact._id || contact.phone}>
-                    <h1>{contact.firstName} {contact.lastName}</h1>
+                    <h1 style={{padding:"8px auto",color:"blue"}}>{contact.firstName} {contact.lastName}</h1>
                     <div className="contact-details-temp3">
                       <strong>Phone:</strong> {contact.phone} <br />
                       <strong>Email:</strong> {contact.email} <br />
@@ -118,7 +118,7 @@ const Coverlettertemp3 = () => {
                 <ul>
                   {subjects.map((subject) => (
                     <li key={subject._id || subject.subjectName}>
-                      <p><strong>Subject:</strong> {subject.subjectName}</p>
+                      <p style={{textAlign:"justify",padding:"5px auto"}}><strong>Subject:</strong> {subject.subjectName}</p>
                     </li>
                   ))}
                 </ul>
@@ -136,7 +136,7 @@ const Coverlettertemp3 = () => {
                 <ul>
                   {recipients.map((recipient) => (
                     <li key={recipient._id || recipient.firstName}>
-                      <p><strong>Dear:</strong> {recipient.firstName} {recipient.lastName}</p>
+                      <p style={{textAlign:"justify"}}><strong>Dear:</strong> {recipient.firstName} {recipient.lastName}</p>
                     </li>
                   ))}
                 </ul>
@@ -168,7 +168,7 @@ const Coverlettertemp3 = () => {
             ) : errorState.letterBody ? (
               <div className="error">{errorState.letterBody}</div>
             ) : (
-              <p>{letterBody}</p>
+              <p style={{textAlign:"justify"}}>{letterBody}</p>
             )}
           </div>
 
@@ -183,9 +183,9 @@ const Coverlettertemp3 = () => {
           </div>
 
           <div className="sincerely-section-temp3">
-            <h3>Sincerely,</h3>
+            <h3 style={{color:"blue"}}>Sincerely,</h3>
             {contacts.length > 0 && (
-              <p>{contacts[0].firstName} {contacts[0].lastName}</p>
+              <p style={{color:"blue"}}>{contacts[0].firstName} {contacts[0].lastName}</p>
             )}
           </div>
         </div>

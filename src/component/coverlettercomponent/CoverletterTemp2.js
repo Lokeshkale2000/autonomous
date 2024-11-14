@@ -95,7 +95,7 @@ const CoverletterTemp2 = () => {
               <div>
                 {contacts.length > 0 && (
                   <div>
-                    <h1 style={{ border:"1px solid green",padding:"10px 280px", background:"blue"}}>{contacts[0].firstName} {contacts[0].lastName}</h1>
+                    <h1 style={{ border:"1px solid green",padding:"10px 240px", background:"blue"}}>{contacts[0].firstName} {contacts[0].lastName}</h1>
                     <div>
                       <strong>Phone:</strong> {contacts[0].phone} <br />
                       <strong>Email:</strong> {contacts[0].email} <br />
